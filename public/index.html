@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sensores em Tempo Real</title>
+</head>
+<body>
+  <h1>Dados do ESP32</h1>
+  <pre id="saida">Carregando...</pre>
+
+  <script>
+    async function atualizar() {
+      const res = await fetch('/sensor/dados');
+      const dados = await res.json();
+      document.getElementById('saida').textContent = JSON.stringify(dados, null, 2);
+    }
+
+    atualizar();
+    setInterval(atualizar, 2000);
+  </script>
+</body>
+</html>

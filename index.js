@@ -16,5 +16,7 @@ app.get('/', (req, res) => {
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    console.log(`Servidor rodando em http://IP:${port}`);
-});
+    console.log(`Servidor rodando em SEUIP:${port}/sensor/dados`);
+}); // Substitua SEUIP pelo seu endereco de IP
+
+app.use(express.static("public"));
