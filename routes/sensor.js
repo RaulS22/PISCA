@@ -8,7 +8,13 @@ let dadosSensores = [];
 router.post('/dados', (req, res) => {
     const { temperatura, umidade, pressao, altitude } = req.body;
 
-    if (!temperatura || !umidade || !pressao || !altitude) {
+if (
+  temperatura === undefined ||
+  umidade === undefined ||
+  pressao === undefined ||
+  altitude === undefined
+) {
+
         return res.status(400).json({ erro: 'Dados incompletos' });
     }
 
