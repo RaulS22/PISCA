@@ -12,6 +12,11 @@ do selfhost e de projetos do estilo HomeLabbing é justamente a
 autonomia e a liberdade em trabalhar, afinal pode-se personalizar
 o projeto conforme as suas próprias necessidades.
 
-Este projeto conta com as ferramentas
-- [Node.js](https://nodejs.org/en), na qual o express foi usado para uma maior conveniência 
-- [Arduino IDE](https://www.arduino.cc/en/software/), para programar o ESP32
+Este projeto conta com as ferramentas:
+- [Node.js](https://nodejs.org/en), na qual o express foi usado para uma maior conveniência.
+- [Arduino IDE](https://www.arduino.cc/en/software/), para programar o ESP32.
+
+Como perspectivas futuras, pretendemos implementar a comunicação em HTTPS usando:
+- [DuckDNS](https://www.duckdns.org/), para o dominio do site.
+- [NGNIX](https://nginx.org/) em combinação com [Certbot](https://certbot.eff.org/), para a proxy reversa.
+
